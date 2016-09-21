@@ -1,29 +1,32 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
+# Made by Felipe Sandoval Sibada
 
 import sys
 
-
 def plus(op1, op2):
-    """ Function to sum the operands """
+    """Function to sum the operands
+    """
     return op1 + op2
 
-
 def minus(op1, op2):
-    """ Function to substract the operands """
+    """Function to substract the operands
+    """
     return op1 - op2
 
 def multiply(op1, op2):
-    """Function to multiply the operands"""
+    """Function to multiply the operands
+    """
     return op1 * op2
 
 def divide(op1, op2):
-    """Function to divide the operands"""
+    """Function to divide the operands
+    """
     try:
         return op1 / op2
     except ZeroDivisionError:
-        print("You cannot divide by zero")
-        sys.exit()
+        sys.exit("Division by zero is not allowed.")
+       
         
 if __name__ == "__main__":
     try:
@@ -43,6 +46,7 @@ if __name__ == "__main__":
     elif sys.argv[2] == "divide":
         result = divide(operando1, operando2)
     else:
-        sys.exit('Operación sólo puede ser sumar o restar.')
+        sys.exit('You can only add, subtract, divide or multiply.')
+
 
     print(result)
