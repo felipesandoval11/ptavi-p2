@@ -3,20 +3,9 @@
 # Made by Felipe Sandoval Sibada
 
 import sys
+import calcoo
 
-class Calculadora:
-	def __init__(self, op1, op2):
-		self.var1 = op1
-		self.var2 = op2
-
-	def add(self):
-		return (self.var1 + self.var2)
-
-	def minus(self):
-		return (self.var1 - self.var2)
-
-
-class CalculadoraHija(Calculadora):
+class CalculadoraHija(calcoo.Calculadora):
 	def multiply(self):
 		return (self.var1 * self.var2)
 
@@ -37,7 +26,7 @@ if __name__ == "__main__":
 		sys.exit("Error: You need to give me numbers on the Command Line")
 
 # making the object	
-	variables = Calculadora(operando1, operando2)
+	variables = calcoo.Calculadora(operando1, operando2)
 
 	if sys.argv[2] == "suma":
 		result = CalculadoraHija.add(variables)
