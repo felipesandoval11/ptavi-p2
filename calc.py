@@ -4,20 +4,24 @@
 
 import sys
 
+
 def plus(op1, op2):
     """Function to sum the operands
     """
     return op1 + op2
+
 
 def minus(op1, op2):
     """Function to substract the operands
     """
     return op1 - op2
 
+
 def multiply(op1, op2):
     """Function to multiply the operands
     """
     return op1 * op2
+
 
 def divide(op1, op2):
     """Function to divide the operands
@@ -26,8 +30,7 @@ def divide(op1, op2):
         return op1 / op2
     except ZeroDivisionError:
         sys.exit("Division by zero is not allowed.")
-       
-        
+
 if __name__ == "__main__":
     try:
         operando1 = int(sys.argv[1])
